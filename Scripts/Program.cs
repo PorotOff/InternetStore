@@ -20,14 +20,14 @@ namespace InternetStore
             warehouse.ShowGoods();
 
             shop.PlaceGoodToCart(iPhone12, 4);
-            //shop.PlaceGoodToCart(iPhone11, 3); //при такой ситуации возникает ошибка так, как нет нужного количества товара на складе
+            shop.PlaceGoodToCart(iPhone11, 3);
 
             Console.WriteLine("ТОВАРЫ В КОРЗИНЕ");
             shop.Cart.ShowGoods();
 
             Console.WriteLine(shop.Order().Paylink);
 
-            shop.PlaceGoodToCart(iPhone12, 9); //Ошибка, после заказа со склада убираются заказанные товары
+            shop.PlaceGoodToCart(iPhone12, 9);
         }
     }
 }
